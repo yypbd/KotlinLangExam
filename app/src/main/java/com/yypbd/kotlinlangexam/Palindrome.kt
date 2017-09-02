@@ -15,5 +15,17 @@ package com.yypbd.kotlinlangexam
 
 fun isPalindrome(s: String): Boolean {
     // Write your solution here
-    return false
+
+    if(s.length < 2)
+        return true
+
+    var i = 0
+    do {
+        if( s[i] != s[s.length - i - 1] )
+            return false
+
+        i += 1
+    } while(i < s.length / 2)
+
+    return true
 }

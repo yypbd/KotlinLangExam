@@ -23,5 +23,18 @@ package com.yypbd.kotlinlangexam
 
 fun findPairless(a: IntArray): Int {
     // Write your solution here
+
+    for( i in a.indices ) {
+        var count = 0
+        for( j in a.indices ) {
+            if( a[i] == a[j] )
+                count += 1
+        }
+
+        if( count % 2 != 0 ) {
+            return a[i]
+        }
+    }
+
     return 0
 }

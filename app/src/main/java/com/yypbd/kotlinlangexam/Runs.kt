@@ -19,5 +19,17 @@ package com.yypbd.kotlinlangexam
 
 fun runs(a: IntArray): Int {
     // Write your solution here
-    return 0
+    if(a.isEmpty())
+        return 0
+
+    var value = a[0]
+    var result = 1
+    for( i in a.indices ) {
+        if( value != a[i] ) {
+            value = a[i]
+            result += 1
+        }
+    }
+
+    return result
 }

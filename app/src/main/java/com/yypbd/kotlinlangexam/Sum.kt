@@ -11,5 +11,10 @@ package com.yypbd.kotlinlangexam
 
 fun sum(a: IntArray): Int {
     // Write your solution here
-    return 0
+
+    var result: Int = 0
+    for (value in a)
+        result += value
+
+    return result
 }

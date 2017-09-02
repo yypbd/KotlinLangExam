@@ -10,5 +10,18 @@ package com.yypbd.kotlinlangexam
  */
 
 fun indexOfMax(a: IntArray): Int? {
-    return 0
+    if (a.isEmpty())
+        return null
+
+    var maxValue = a[0]
+    var result = 0
+
+    for (i in a.indices) {
+        if(a[i] >= maxValue) {
+            maxValue = a[i]
+            result = i
+        }
+    }
+
+    return result
 }
